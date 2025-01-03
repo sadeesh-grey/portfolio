@@ -1,14 +1,5 @@
-/*!
-  * Item: Kitzu
-  * Description: Personal Portfolio Template
-  * Author/Developer: Exill
-  * Author/Developer URL: https://themeforest.net/user/exill
-  * Version: v2.0.0
-  * License: Themeforest Standard Licenses: https://themeforest.net/licenses
-  */
-
 /* Contact Me Button */
-.fixed-block.block-right .contact-me-button {
+.contact-me-button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -27,7 +18,7 @@
   /* Attention-grabbing animation */
 }
 
-.fixed-block.block-right .contact-me-button:hover {
+.contact-me-button:hover {
   background-color: #017b53;
   transform: scale(1.1);
 }
@@ -51,4 +42,82 @@
     box-shadow: 0 0 20px rgba(1, 158, 102, 0.9);
     transform: scale(1.05);
   }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+
+  /* Contact Me Button */
+  .contact-me-button {
+    padding: 12px 20px;
+    /* Increase padding for better touch targets */
+    font-size: 14px;
+    /* Adjust font size for mobile */
+    width: 50%;
+    /* Make the button full width on mobile */
+    justify-content: center;
+    /* Center align the content */
+    border-radius: 10px;
+    /* Slightly reduce the border radius for mobile */
+  }
+
+  /* Mail Icon */
+  .contact-me-button i {
+    font-size: 16px;
+    /* Reduce icon size slightly on mobile */
+  }
+
+  /* Prevent scaling on mobile */
+  .contact-me-button:hover {
+    transform: none;
+    /* Remove scale effect on mobile */
+    background-color: #017b53;
+    /* Keep hover color for mobile */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+
+  /* Contact Me Button */
+  .contact-me-button {
+    padding: 10px 12px;
+    /* Further reduce padding for very small screens */
+    font-size: 12px;
+    /* Smaller font size for very small screens */
+    margin-top: 30px;
+  }
+
+  /* Mail Icon */
+  .contact-me-button i {
+    font-size: 14px;
+    /* Further reduce icon size */
+  }
+}
+
+/* Container and Row Adjustments */
+.container {
+  height: 100vh;
+  /* Ensure full height for vertical centering */
+}
+
+.row {
+  height: 100%;
+  /* Make sure row stretches vertically */
+}
+
+.home-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-name span {
+  color: #019e66;
+  /* Highlighted color for the name */
+}
+
+/* Headline animation */
+.cd-headline {
+  font-size: 30px;
+  color: #333;
 }
