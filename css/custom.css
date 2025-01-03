@@ -6,3 +6,49 @@
   * Version: v2.0.0
   * License: Themeforest Standard Licenses: https://themeforest.net/licenses
   */
+
+/* Contact Me Button */
+.fixed-block.block-right .contact-me-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* Space between icon and text */
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #ffffff !important;
+  background-color: #019e66;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  animation: pulse 1.5s infinite;
+  /* Attention-grabbing animation */
+}
+
+.fixed-block.block-right .contact-me-button:hover {
+  background-color: #017b53;
+  transform: scale(1.1);
+}
+
+/* Mail Icon */
+.contact-me-button i {
+  font-size: 18px;
+  /* Adjust size of the icon */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(1, 158, 102, 0.7);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(1, 158, 102, 0.9);
+    transform: scale(1.05);
+  }
+}
