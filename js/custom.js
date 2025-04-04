@@ -23,6 +23,16 @@ function handleFormSubmit(event) {
     formData.append('email', email);
     formData.append('message', message);
 
+    // Get the button and feedback elements
+    const submitButton = document.getElementById('contact-submit');
+    const feedback = document.getElementById('contact-feedback');
+    const originalButtonText = submitButton.textContent;
+
+    // Update button state to "Wait..."
+    submitButton.textContent = "Wait...";
+    submitButton.disabled = true;
+    submitButton.style.backgroundColor = "#777"; // Temporary color for "Wait..."
+
     // Send the form data via Fetch API
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -32,22 +42,26 @@ function handleFormSubmit(event) {
         .then(data => {
             // Check for a successful response
             if (data.success) {
-                // Show success message
-                document.getElementById('contact-feedback').textContent = "Your message has been sent successfully!";
-                document.getElementById('contact-feedback').style.color = "green";
+                feedback.textContent = "Your message has been sent successfully!";
+                feedback.style.color = "green";
 
                 // Clear the form
                 document.getElementById('contact-form').reset();
             } else {
-                // Show error message
-                document.getElementById('contact-feedback').textContent = "Oops! Something went wrong. Please try again.";
-                document.getElementById('contact-feedback').style.color = "red";
+                feedback.textContent = "Oops! Something went wrong. Please try again.";
+                feedback.style.color = "red";
             }
         })
         .catch(error => {
             // Handle network errors
-            document.getElementById('contact-feedback').textContent = "Error sending the message. Please try again.";
-            document.getElementById('contact-feedback').style.color = "red";
+            feedback.textContent = "Error sending the message. Please try again.";
+            feedback.style.color = "red";
+        })
+        .finally(() => {
+            // Reset the button state
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            submitButton.style.backgroundColor = "#009e66"; // Restore original color
         });
 }
 
