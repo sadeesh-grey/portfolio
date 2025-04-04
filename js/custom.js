@@ -50,3 +50,21 @@ function handleFormSubmit(event) {
             document.getElementById('contact-feedback').style.color = "red";
         });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Set your birthdate (YYYY, MM - 1 (since months are 0-based), DD)
+    const birthDate = new Date(2002, 1, 22); // Example: July 15, 2000
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    // If the birthday hasn't occurred yet this year, subtract 1
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    // Update the age in the HTML
+    document.getElementById("age").textContent = age;
+});

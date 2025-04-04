@@ -75,7 +75,7 @@
         <div class="col-12 col-lg-8 home-content text-center">
           <h1 class="home-name">Sadeesh <span>Grero</span></h1>
           <h4 class="cd-headline clip home-headline">I’m a <span class="cd-words-wrapper single-headline"><b
-                class="is-visible">Developer</b><b>UI/UX Designer</b><b>Freelancer</b></span></h4>
+                class="is-visible">Full Stack Developer</b><b>UI/UX Designer</b><b>Freelancer</b></span></h4>
           <!-- Mail me -->
           <a href="mailto:sadeeshgrero@gmail.com?subject=Hello%20Sadeesh&body=I%20would%20like%20to%20get%20in%20touch%20with%20you."
             class="contact-me-button" target="_blank">
@@ -96,7 +96,7 @@
       <!-- Social media icons-->
       <div class="fixed-block block-right">
         <ul class="list-unstyled social-icons">
-          <li><a href="#0"><i class="icon ion-logo-github"></i></a></li>
+          <li><a href="https://github.com/sadeesh-grey?tab=repositories"><i class="icon ion-logo-github"></i></a></li>
           <li><a href="#0"><i class="icon ion-logo-facebook"></i></a></li>
           <li><a href="#0"><i class="icon ion-logo-linkedin"></i></a></li>
           <li><a href="#0"><i class="icon ion-logo-instagram"></i></a></li>
@@ -157,10 +157,11 @@
                         <div class="col-12 col-md-6 single-info"><span>Email:</span>
                           <p><a href="sadeeshgrero@gmail.com">sadeeshgrero@gmail.com</a></p>
                         </div>
-                      </div>
+                      </div>  
                       <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>Age:</span>
-                          <p>22</p>
+                        <div class="col-12 col-md-6 single-info">
+                          <span>Age:</span>
+                          <p id="age"></p>
                         </div>
                         <div class="col-12 col-md-6 single-info"><span>From:</span>
                           <p>Ja-ela, Sri lanka</p>
@@ -488,6 +489,9 @@
       </div>
     </div>
   </div>
+
+
+
   <!-- Portfolio lightbox-->
   <div class="lightbox-wrapper" id="portfolio" data-simplebar>
     <div class="container">
@@ -513,47 +517,93 @@
                 <div class="col-12">
                   <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                     <li class="list-inline-item tab-active" data-filter="*">All</li>
-                    <li class="list-inline-item" data-filter=".brand">Brand</li>
-                    <li class="list-inline-item" data-filter=".design">Design</li>
-                    <li class="list-inline-item" data-filter=".photos">Photos</li>
+                    <li class="list-inline-item" data-filter=".design">UI/UX Design</li>
+                    <li class="list-inline-item" data-filter=".photos">Video Work</li>
+                    <li class="list-inline-item" data-filter=".brand">Graphic Design</li>
                   </ul>
                 </div>
               </div>
               <!-- Thumbnail list-->
               <div class="portfolio-grid row">
                 <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item" href="img/item-2.png"
-                    data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-2.png">
+                <div class="single-item col-6 col-lg-4 design">
+                  <a href="https://www.figma.com/proto/i6LviKwLK1nOVxYSygMaYV/RAIDEN?node-id=47-59&t=2BwYMFNKGYSgnTQA-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Radien UI/UX Design" src="img/item-2.png">
                       <div class="item-content">
-                        <h6 class="content-title">Label Tag Mockup</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">Radien UI/UX Design</h6>
+                        <span class="content-more">More Info</span>
                       </div>
                     </div>
-                  </a></div>
+                  </a>
+
+                </div>
                 <!-- Single item-->
                 <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item" href="img/item-6.png"
                     data-lightbox>
                     <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-6.png">
                       <div class="item-content">
-                        <h6 class="content-title">3D Bag Mockup</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">Youtube Channel Logos</h6><span class="content-more">More Info</span>
                       </div>
                     </div>
                   </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item" href="img/item-3.png"
-                    data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-3.png">
+
+                <!-- YouTube Videos -->
+                <div class="single-item col-6 col-lg-4 photos">
+                  <a href="https://youtu.be/XisTY4PswG0?si=-WfYw84GiNrRj5DC" target="_blank" rel="noopener noreferrer">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="YouTube Video" src="img/item-8.png">
                       <div class="item-content">
-                        <h6 class="content-title">Modern Bag Design</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">Leewa Nam Kawiyak</h6>
+                        <span class="content-more">Watch Now</span>
                       </div>
                     </div>
-                  </a></div>
+                  </a>
+                </div>
+                <!-- YouTube Videos -->
+                <div class="single-item col-6 col-lg-4 photos">
+                  <a href="https://youtu.be/zL4AbCG6qOk?si=zLfQfVX-pyLpe5y3" target="_blank" rel="noopener noreferrer">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="YouTube Video" src="img/item-9.png">
+                      <div class="item-content">
+                        <h6 class="content-title">Ukulu Mukulu</h6>
+                        <span class="content-more">Watch Now</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- YouTube Videos -->
+                <div class="single-item col-6 col-lg-4 photos">
+                  <a href="https://youtu.be/7uf2eQhcJX8?si=KIK7uBYCOZ12gr4g" target="_blank" rel="noopener noreferrer">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="YouTube Video" src="img/item-10.png">
+                      <div class="item-content">
+                        <h6 class="content-title">Pathu De Sonduru Lokayak</h6>
+                        <span class="content-more">Watch Now</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Single item-->
+                <div class="single-item col-6 col-lg-4 design">
+                  <a href="https://www.figma.com/proto/wcJ8S9E8wppfjwTcSn8xwv/Law-Firm-Figma-Template-(Community)?node-id=1-1142&starting-point-node-id=1%3A1142"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Law firm Design" src="img/item-3.png">
+                      <div class="item-content">
+                        <h6 class="content-title">Law Firm UI/UX Design</h6>
+                        <span class="content-more">More Info</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
                 <!-- Single item-->
                 <div class="single-item col-6 col-lg-4 brand"><a class="portfolio-item" href="img/item-4.png"
                     data-lightbox>
                     <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-4.png">
                       <div class="item-content">
-                        <h6 class="content-title">Coffee Cup Design</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">Bowwow.lk Design</h6><span class="content-more">More Info</span>
                       </div>
                     </div>
                   </a></div>
@@ -562,7 +612,7 @@
                     data-lightbox>
                     <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-5.png">
                       <div class="item-content">
-                        <h6 class="content-title">T-Shirt Design</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">EarGear Academy</h6><span class="content-more">More Info</span>
                       </div>
                     </div>
                   </a></div>
@@ -571,7 +621,7 @@
                     data-lightbox>
                     <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-7.png">
                       <div class="item-content">
-                        <h6 class="content-title">Packaging Box Mockup</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">Ce-cool Studio Ja-ela</h6><span class="content-more">More Info</span>
                       </div>
                     </div>
                   </a></div>
@@ -582,6 +632,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Portfolio End -->
+
   <!-- Blog lightbox-->
   <div class="lightbox-wrapper" id="blog" data-simplebar>
     <div class="container">
@@ -681,6 +734,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- Contact lightbox-->
   <div class="lightbox-wrapper" id="contact" data-simplebar>
     <div class="container">
